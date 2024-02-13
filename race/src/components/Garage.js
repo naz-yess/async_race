@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { TextField, Button, Box, Input, Typography, Container } from "@mui/material";
+import Car from "./Car";
 
 export default function Garage() {
   const [carName, setCarName] = useState('');
@@ -25,7 +26,7 @@ export default function Garage() {
 
   return (
     <Box  >
-      <Container sx={{  '& > :not(style)': { m: 1 }, paddingTop: "70px"}}>
+      <Container sx={{  '& > :not(style)': { m: 1 }, paddingTop: "70px", height: "50%", width: "50%",  margin: "0 auto", textAlign: "center"}}>
       <TextField
         label="Car Name"
         variant="outlined"
@@ -53,7 +54,7 @@ export default function Garage() {
         ))}
       </Box>
       </Container>
-      <Box sx={{paddingLeft: "140px", py: "35px"}}> 
+      <Box sx={{paddingLeft: "50px", paddingTop: "120px", paddingBottom: "50px"}}> 
           <Typography variant='h3'>
           Garage&nbsp;()
         </Typography>
@@ -61,7 +62,15 @@ export default function Garage() {
             Page&nbsp;#
         </Typography>
     </Box>
-
+    <Box  sx={{paddingLeft: "50px"}} >
+ <Car />
+ <Car />
+ <Car />
+ <Car />
+  <Car />
+  <Car />
+  
+    </Box>
 
     </Box>
   );
